@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .a{
+            border-radius: 10px;
+            margin-left: 10px;
+            height: 30px;
+            width: 150px;
+            color: deeppink;
+            background-color: rgb(236, 216, 255);
+            border: 0;
+            cursor: pointer;
+        }
+
+        .a:hover{
+            background-color: black!important;
+            color: aliceblue;
+        }
+
+        .b{
+            border-radius: 10px;
+            margin-left: 10px;
+            height: 40px;
+            width: 150px;
+            color: deeppink;
+            background-color: rgb(236, 216, 255);
+            border: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            gap: 10px;
+        }
+
+        .b:hover{
+            background-color: black!important;
+            color: aliceblue;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        
+        .card{
+            border: 1px solid black;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        /* o @media serveve para alterar as propriedades das tags com base no tamanho do dipositivo
+        para garantir a responsavidade do site, temos que verificar como fica a estilização
+        em vários tamanhos de telas diferentes, pode ser que no computador fique ok, porem quando acessa
+        pelo celular o site quebra. Nesse caso sera necessario aplicar ajustes no tamanho de tela com
+        o @media()
+
+        Usamos o *important para forçar a estilização de uma tag, com a tag pode ter id e variar classes
+        o html e css precisam saber qual estilo aplicar, forçamos isso usando o !important no final do atributo */
+        @media(max-width:750px){
+            button{
+                width: 50px!important;
+                height: 30px!important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+    SemÂntica: é a parte linguistica que estuda o significado e sentido das palavras!
+    A partir da versão 5 do HTML, surgiram as tags semânticas que descrevem o significado
+    das parte do seu site para o navegador e outros desenvolvedores entenderem!
+    -->
+
+    <header style="background-color: indigo;height: 10vh;display: flex;align-items: center;justify-content: center;">  <!-- cebeçalho da pagina -->
+
+        <nav style="display:flex ;align-items: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/pt/9/9a/My_Little_Pony_Friendship_is_Magic_logo_2017.png" alt=""
+            height="85px">
+            <a href=""><button class="a">INICIO</button></a>
+            <a href=""><button class="a">SOBRE NÓS</button></a>
+            <a href=""><button class="a">TRABALHE CONOSCO</button></a>
+        </nav>
+
+    </header>
+
+    <main style="background-color: navy;height: 70vh;">  <!-- conteudo principal, é onde irão as informações do site em si -->
+
+        <section style="height: 40%;background-color: purple;display: flex;align-items: center;justify-content: center;flex-direction: column;text-align: center;">
+             <!-- section, é uma sessão da pagina aonde você pode  colocar um conteudo você pode separar seu site em varias sessões-->
+            <h1 style="color: aliceblue;">✨ My Little Pony — fofura que combina com você. 🦄</h1>
+            <p style="color: aliceblue;"><br>Encontre pelúcias de My Little Pony para colecionar, decorar seu espaço ou presentear alguém especial.<br><br>Com designs encantadores e detalhes únicos, cada personagem traz um toque de nostalgia, estilo e personalidade.<br><br>🌈 Escolha seu favorito e leve essa magia para casa.</p>
+        </section>
+
+        <section style="height: 60%;background-color: rgb(207, 0, 104);display: flex;">
+
+            <div style="width: 50%;height: 100%;">
+
+                <div class="card">
+                    <h4 style="color: aliceblue;">Pelucia da Fluttershy</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTQZffUjsXJFdvpxucp6pGgL-PuOpooXyOeA&s" alt="" height="50%">
+                    <p style="color: aliceblue;">R$ 45.99</p>
+                </div>
+
+            </div>
+
+            <div style="width: 50%;height: 100%;">
+                <div class="card">
+                    <h4 style="color: aliceblue;">Pelucia da Rarity</h4>
+                    <img src="data:image/jpeg;base64,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" alt="" height="50%">
+                    <p style="color: aliceblue;">R$ 45.99</p>
+                </div>
+            </div>
+
+            <div style="width: 50%;height: 100%;">
+
+                <div class="card">
+                    <h4 style="color: aliceblue;">Pelucia da Twilight Sparkle</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbkywmg_c8x53vkzWKOgZD8KOcnRCeCNB-FhQmqD1RDA&s=10" alt="" height="50%">
+                    <p style="color: aliceblue;">R$ 45.99</p>
+                </div>
+
+            </div>
+
+            <div style="width: 50%;height: 100%;">
+
+                <div class="card">
+                    <h4 style="color: aliceblue;">Pelucia da Applejack</h4>
+                    <img src="https://i0.wp.com/moggymawee.com/wp-content/uploads/2014/06/aj1.jpg?fit=1200%2C1200&ssl=1" alt="" height="50%">
+                    <p style="color: aliceblue;">R$ 45.99</p>
+                </div>
+
+            </div>
+
+            <div style="width: 50%;height: 100%;">
+
+                <div class="card">
+                    <h4 style="color: aliceblue;">Pelucia da Rainbow Dash</h4>
+                    <img src="https://preview.redd.it/custom-made-rainbow-dash-plushie-19-inches-46cm-tall-v0-g523om0x37s41.jpg?width=1080&crop=smart&auto=webp&s=10bfadc8af53b1cc1a24b1a78591adbdce2121d3" alt="" height="50%">
+                    <p style="color: aliceblue;">R$ 45.99</p>
+                </div>
+
+            </div>
+
+            <div style="width: 50%;height: 100%;">
+
+                <div class="card">
+                    <h4 style="color: aliceblue;">Pelucia da Pinkie Pie</h4>
+                    <img src="https://i.pinimg.com/736x/39/c3/10/39c3100893b10e69e582ac712966a23b.jpg" alt="" height="50%">
+                    <p style="color: aliceblue;">R$ 45.99</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer style="background-color: rgb(233, 0, 136);height: 20vh;display: flex;align-items: center;justify-content: center;"> <!-- footer, é o rodapé da página -->
+
+        <nav style="display: flex;align-items: center;justify-content: center;">
+            
+            <a href=""><button class="b">
+                <img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/>
+                Instagram
+            </button></a>
+ 
+            <a href=""><button class="b">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1"/>
+                TikTok
+            </button></a>
+            
+            <a href=""><button class="b">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
+                YouTube
+            </button></a>
+
+        </nav>
+
+    </footer>
+
+</body>
+</html>
